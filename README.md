@@ -43,9 +43,16 @@ ares-novacom --device lg --getkey      # pide la clave de la app Developer Mode
 ares-install --device lg kino-receptor-lg.ipk
 ```
 
-### Después
+### Después: cómo usarlo desde Kino
 
-En el celular, en Kino, envía algo a la TV. **La primera vez la TV pregunta si permite el celular: acepta con el control remoto.**
+Con el receptor ya instalado, celular y TV en la misma red Wi-Fi y la TV encendida:
+
+1. En Kino, abre un video y empieza a reproducirlo.
+2. Toca el botón de **cast** y elige **Reproducir en TV (DLNA)**.
+3. En la lista de dispositivos, elige la primera opción, **Kino Receptor · nombre de tu TV**.
+4. **La primera vez la TV pregunta si permite el celular: acepta con el control remoto.**
+
+La TV abre el receptor y reproduce el video. Si la TV no puede reproducirlo con el receptor, Kino lo reintenta solo por DLNA en la misma TV.
 
 ## Si algo falla
 
