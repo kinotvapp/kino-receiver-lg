@@ -1,0 +1,15 @@
+{
+  "id": "com.kino.receptor",
+  "version": "1.0.0",
+  "vendor": "Kino",
+  "type": "web",
+  "main": "index.html",
+  "title": "Kino Receptor",
+  "icon": "icon80.png",
+  "largeIcon": "icon130.png",
+  "bgColor": "#000000",
+  "disallowScrollingInMainWindow": true,
+  "disableBackHistoryAPI": true,
+  "requiredPermissions": [],
+  "requiredACG": []
+}
