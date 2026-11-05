@@ -22,7 +22,7 @@ descarga `kino-receptor-lg.ipk`. Elige una opción:
 ### Opción A: con interfaz gráfica (sin terminal)
 
 Instala [Dev Manager Desktop](https://github.com/webosbrew/dev-manager-desktop) (app de la comunidad webosbrew), agrega tu TV con su
-IP y la clave (*passphrase*) de la app Developer Mode, y arrastra `kino-receptor-lg.ipk` a la pestaña de apps. *(No la hemos probado
+IP y la clave (*passphrase*) de la app Developer Mode, y arrastra [`kino-receptor-lg.ipk`](https://github.com/kinotvapp/kino-receiver-lg/releases/latest/download/kino-receptor-lg.ipk) a la pestaña de apps. *(No la hemos probado
 nosotros; si falla, usa la opción B.)*
 
 ### Opción B: script (hace todo por ti)
