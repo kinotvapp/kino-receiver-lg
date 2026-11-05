@@ -16,26 +16,36 @@ TV y la TV reproduce el video con su propio reproductor. No tiene servidor, ni p
 
 ## Instalar (o actualizar)
 
-Instalar y actualizar es lo mismo: el mismo comando reemplaza la versión anterior.
+Instalar y actualizar es lo mismo: reinstalar encima reemplaza la versión anterior. Antes, activa Developer Mode en la TV (ver arriba) y
+descarga `kino-receptor-lg.ipk`. Elige una opción:
 
-1. Descarga `kino-receptor-lg.ipk`.
-2. Instala la herramienta de LG:
-   ```
-   npm i -g @webos-tools/cli
-   ```
-3. Registra la TV (una sola vez; cambia la IP por la de tu TV, la ves en Ajustes ▸ Red):
-   ```
-   ares-setup-device --add lg -i "host=IP_DE_LA_TV" -i "port=9922" -i "username=prisoner"
-   ```
-4. Trae la llave. Te pide la clave (*passphrase*) que muestra la app Developer Mode en la TV:
-   ```
-   ares-novacom --device lg --getkey
-   ```
-5. Instala:
-   ```
-   ares-install --device lg kino-receptor-lg.ipk
-   ```
-6. En el celular, en Kino, envía algo a la TV. **La primera vez la TV pregunta si permite el celular: acepta con el control remoto.**
+### Opción A: con interfaz gráfica (sin terminal)
+
+Instala [Dev Manager Desktop](https://github.com/webosbrew/dev-manager-desktop) (app de la comunidad webosbrew), agrega tu TV con su
+IP y la clave (*passphrase*) de la app Developer Mode, y arrastra `kino-receptor-lg.ipk` a la pestaña de apps. *(No la hemos probado
+nosotros; si falla, usa la opción B.)*
+
+### Opción B: script (hace todo por ti)
+
+Descarga este repositorio (botón **Code ▸ Download ZIP**), descomprímelo y ejecuta:
+
+- **Windows:** doble clic en `instalar.bat`
+- **Mac / Linux:** `./instalar.sh`
+
+Te pide la IP de la TV (Ajustes ▸ Red) y la clave que muestra la app Developer Mode; instala la herramienta de LG si falta.
+
+### Opción C: a mano
+
+```
+npm i -g @webos-tools/cli
+ares-setup-device --add lg -i "host=IP_DE_LA_TV" -i "port=9922" -i "username=prisoner"
+ares-novacom --device lg --getkey      # pide la clave de la app Developer Mode
+ares-install --device lg kino-receptor-lg.ipk
+```
+
+### Después
+
+En el celular, en Kino, envía algo a la TV. **La primera vez la TV pregunta si permite el celular: acepta con el control remoto.**
 
 ## Si algo falla
 
